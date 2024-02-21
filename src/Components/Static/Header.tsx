@@ -26,15 +26,26 @@ const Header = () => {
               />
             </div>
             <div className="hidden items-center text-[18px] gap-[30px] text-white md:flex">
-              <NavLink to='/' className=" cursor-pointer">Home</NavLink>
-              <NavLink to='/features' className=" cursor-pointer">Features</NavLink>
-              <NavLink to='' onClick={toggleFunction2} className="flex gap-1 cursor-pointer transition-all duration-500">
+              <NavLink to="/" className=" cursor-pointer">
+                Home
+              </NavLink>
+              <NavLink to="/features" className=" cursor-pointer">
+                Features
+              </NavLink>
+              <NavLink
+                to=""
+                className="flex gap-1 cursor-pointer transition-all duration-500"
+              >
                 Service
                 {/* <FaAngleDown className="mt-[6px]" /> */}
                 {/* {toggleFunction2 ? <FaAngleDown /> : <FaAngleUp />} */}
               </NavLink>
-              <NavLink to='about'  className=" cursor-pointer">About</NavLink>
-              <NavLink to='/contact' className=" cursor-pointer">Contact</NavLink>
+              <NavLink to="about" className=" cursor-pointer">
+                About
+              </NavLink>
+              <NavLink to="/contact" className=" cursor-pointer">
+                Contact
+              </NavLink>
             </div>
             <div className=" w-[150px] hidden md:block">
               <button className=" py-2 px-3 bg-white rounded-md">
@@ -52,9 +63,9 @@ const Header = () => {
             >
               {drop ? (
                 <FaTimes
-                  className="text-[40px] text-white"
+                  className="text-[30px] text-white"
                   onclick={() => {
-                    setDrop(true) ;
+                    setDrop(true);
                   }}
                 />
               ) : (
@@ -62,50 +73,73 @@ const Header = () => {
                   onclick={() => {
                     setDrop(false);
                   }}
-                  className="text-[40px] text-white"
+                  className="text-[30px] text-white"
                 />
               )}
             </div>
             {drop ? (
               <div className="md:hidden w-full h-[calc(100vh-70px)] bg-white text-black absolute top-[70px] right-[0] flex justify-center items-center">
-                
-<nav className=" w-full h-full border-gray-200 dark:bg-gray-900 dark:border-gray-700 mt-4 font-semibold" onClick={()=>{
-  setDrop(false)
-}}>
-  
-    
-    <div className=" w-full md:block md:w-auto">
-      
-        
-          <NavLink to='/'  className= "block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent"  >
-            Home
-          </NavLink>
-        
-        
-        
-          <NavLink to='/features' className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-            Featurs
-          </NavLink>
-        
-          <NavLink to='' className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-            Services
-          </NavLink>
-        
-        
-          <NavLink to='/about' className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-            About
-          </NavLink>
-        
-        
-          <NavLink to='/contact' className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-            Contact
-          </NavLink>
-        <div className=" w-[90%] mt-4 px-24">
-        <BtnProps text="Get Started" />
-        </div>
-    </div>
-</nav>
+                <nav className=" w-full h-full text-blue-950 border-gray-200 dark:bg-gray-900 dark:border-gray-700 mt-4 font-semibold">
+                  <div className=" w-full md:block md:w-auto">
+                    <NavLink
+                      to="/"
+                      className={({ isActive }) =>
+                        isActive
+                          ? "block py-2 px-3 text-white bg-blue-950 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent"
+                          : "block py-2 px-3"
+                      }
+                    >
+                      Home
+                    </NavLink>
 
+                    <NavLink
+                      to="/features"
+                      className={({ isActive }) =>
+                        isActive
+                          ? "block py-2 px-3 text-white bg-blue-950 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent"
+                          : "block py-2 px-3"
+                      }
+                    >
+                      Featurs
+                    </NavLink>
+
+                    <NavLink
+                      to=""
+                      className={({ isActive }) =>
+                        isActive
+                          ? "block py-2 px-3 text-white bg-blue-950 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent"
+                          : "block py-2 px-3"
+                      }
+                    >
+                      Services
+                    </NavLink>
+
+                    <NavLink
+                      to="/about"
+                      className={({ isActive }) =>
+                        isActive
+                          ? "block py-2 px-3 text-white bg-blue-950 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent"
+                          : "block py-2 px-3"
+                      }
+                    >
+                      About
+                    </NavLink>
+
+                    <NavLink
+                      to="/contact"
+                      className={({ isActive }) =>
+                        isActive
+                          ? "block py-2 px-3 text-white bg-blue-950 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent"
+                          : "block py-2 px-3"
+                      }
+                    >
+                      Contact
+                    </NavLink>
+                    <div className=" w-[90%] mt-4 px-24">
+                      <BtnProps text="Get Started" />
+                    </div>
+                  </div>
+                </nav>
               </div>
             ) : null}
 

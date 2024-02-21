@@ -29,6 +29,11 @@ export const MainRouter = createBrowserRouter([
       },
       {
         index: true,
+        path: '/about',
+        element: <About/>
+      },
+      {
+        index: true,
         path: '/service',
         element: <StartUsing/>
       },
