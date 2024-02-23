@@ -60,7 +60,7 @@ Say goodbye to scheduling chaos. Our system turns the complex task of timetable 
           <p className="mt-8">So there you have it - NEXT's management system in it's hidden glory. Like having a Personal Assistant for not only your school admin tasks, but also teaching and lesson note jobs and other students features. With it's help, keeping an eye on your teacher, students and running a school is smoother, more efficient and a whole lot less stressful.  </p>
           <b className='text-blue-950 text-[21px]'>How awesome is that?!</b>
           <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">No paper? No problem.</h2>
-          <p className="mt-6">Id orci tellus laoreet id ac. Dolor, aenean leo, ac etiam consequat in. Convallis arcu ipsum urna nibh. Pharetra, euismod vitae interdum mauris enim, consequat vulputate nibh. Maecenas pellentesque id sed tellus mauris, ultrices mauris. Tincidunt enim cursus ridiculus mi. Pellentesque nam sed nullam sed diam turpis ipsum eu a sed convallis diam.</p>
+          <p className="mt-6">Missed school for some days and got lots and lots of paperworks on your desk and you don't know where to start from? Be glad, because papers are getting automated now. Work online with your device or laptop and still do all the complex things you want to. <b className="text-blue-950">Next</b> is here and was built for you. Dive into an endless world of easiness at doing admnistrative tasks</p>
         </div>
       </div>
     </div>

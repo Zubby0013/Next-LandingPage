@@ -5,6 +5,7 @@ import ig from "../../assets/ig.png";
 import twitter from "../../assets/twitter.png";
 import linkden from "../../assets/linkden.png";
 import { FaArrowUp } from "react-icons/fa";
+import { FaSlackHash } from "react-icons/fa";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -24,7 +25,7 @@ const Footer = () => {
           <FaArrowUp />
         </ScrollLink>
       </div>
-      <div className="w-[85%] py-[20px] text-white grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4">
+      <div className="w-[85%] py-[20px] text-white flex justify-center items-center flex-col">
         <div className="flex justify-center items-center">
           <div className="p-[20px] flex justify-center items-center flex-col gap-3">
             <img
@@ -67,7 +68,11 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="py-[20px] col-span-3 grid grid-cols-2 md:grid-cols-3">
+        <div className=" flex gap-3">
+          <div><FaSlackHash size={25}/></div>
+          <div>Copyright©2024 - All right reserved</div>
+        </div>
+        {/* <div className="py-[20px] col-span-3 grid grid-cols-2 md:grid-cols-3">
           <div className="h-full p-[30px]">
             <div className="mb-[10px] font-semibold text-[22px]">Assets</div>
             <ul>
@@ -98,7 +103,7 @@ const Footer = () => {
               <li>eligendi</li>
             </ul>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
