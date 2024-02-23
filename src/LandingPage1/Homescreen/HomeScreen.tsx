@@ -10,11 +10,11 @@ const HomeScreen = () => {
   return (
     <div>
       <Hero />
-      <WorkWithUs/>
       <ABetter/>
       <TrustedBy/>
       <Everything/>
       <StartUsing/>
+      {/* <WorkWithUs/> */}
       {/* <LandingSections /> */}
     </div>
   );

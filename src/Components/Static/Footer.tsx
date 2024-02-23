@@ -33,8 +33,7 @@ const Footer = () => {
               className="w-[150px] h-[100px] object-contain"
             />
             <div className="text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-              libero, placeat aliquam.
+              We are NEXT!!
             </div>
             <div className="flex">
               <div className="py-1 px-2 rounded-full hover:cursor-pointer hover:hoverbounce">

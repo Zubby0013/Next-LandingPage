@@ -1,32 +1,56 @@
-import pix from "../../assets/mainimgs/Child4.jpg";
+import React, { useRef, useState } from 'react';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 const WorkWithUs = () => {
-  const posts = [
-    {
-      id: 1,
-      title: "Boost your conversion rate",
-      href: "#",
-      description:
-        "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
-      date: "Mar 16, 2020",
-      datetime: "2020-03-16",
-      category: { title: "Marketing", href: "#" },
-      author: {
-        name: "Michael Foster",
-        role: "Co-Founder / CTO",
-        href: "#",
-        imageUrl:
-          "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-      },
-    },
-    // More posts...
-  ];
-  return (
-    <div className=" w-full flex justify-center items-center">
-      <div className=" w-[86%]">WorkWithUS</div>
-      
+  const progressCircle:any = useRef(null);
+  const progressContent:any = useRef(null);
+  const onAutoplayTimeLeft = (s:any, time:any, progress:any) => {
+    progressCircle.current.style.setProperty('--progress', 1 - progress);
+    progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
+  };
+  return <div className=" w-full h-[70vh] flex justify-center items-center py-52">
+    <div className=' w-[80%] h-[90%]'>
+    <Swiper
+        spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
+        onAutoplayTimeLeft={onAutoplayTimeLeft}
+        className="mySwiper"
+      >
+        <SwiperSlide>Slide 1</SwiperSlide>
+        <SwiperSlide>Slide 2</SwiperSlide>
+        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>Slide 4</SwiperSlide>
+        <SwiperSlide>Slide 5</SwiperSlide>
+        <SwiperSlide>Slide 6</SwiperSlide>
+        <SwiperSlide>Slide 7</SwiperSlide>
+        <SwiperSlide>Slide 8</SwiperSlide>
+        <SwiperSlide>Slide 9</SwiperSlide>
+        <div className="autoplay-progress" slot="container-end">
+          <svg viewBox="0 0 48 48" ref={progressCircle}>
+          </svg>
+          <span ref={progressContent}></span>
+        </div>
+      </Swiper>
     </div>
-  );
+  </div>;
 };
 
 export default WorkWithUs;
